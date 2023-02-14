@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Downtik";
+}
+
+<div class="content-wrapper text-center">
+    <div class="titre">
+    <h1 class="display-4 bg-dark text-center">Download Tiktok</h1>
+    <h1 class="display-4 bg-dark text-center">Video by The link!</h1>
+
+    </div>
+        <div class="checks text-white d-flex gap-5 justify-content-center">
+            <span class="d-flex justify-content-center gap-2"> <i class="bi bi-check-circle-fill"></i> Telechargement illimité</span>
+            <span class="d-flex justify-content-center gap-2"><i class="bi bi-check-circle-fill"></i> Pas de Filigrane</span>
+        </div>
+
+        <form class="w-75 m-auto mt-5" method="post">
+          <div class="form-group">
+            <input type="text" name="videoUrl" class="form-control" id="videoUrl" aria-describedby="emailHelp" placeholder="Coller le lien ici">
+          </div>
+          <button type="submit" class="btn btn-primary px-4 py-3 mt-5 d-flex align-items-center gap-2 m-auto"><i class="bi bi-file-arrow-down-fill"></i>Telecharger</button>
+        </form>
+
+        <div style="display:@ViewData["ShowData"]" class="video_wrapper pt-4  flex-column align-items-top gap-2 justify-content-center">
+
+            <a class="btn btn-success m-auto px-4 p-3" href="@ViewData["TikTokVideo"]" download target="_blank"><i class="bi bi-file-arrow-down-fill"></i> Telecharger Video </a>
+            <div class="text-white d-flex lign-content-xl-around justify-content-center gap-3">
+            <img class="img-fluid w-25" src="@ViewData["TiktokCover"]"/>
+            <p class="text-white">@ViewData["TikTokDescription"]caca</p>
+            </div>
+        </div>
+
+</div>
